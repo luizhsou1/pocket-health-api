@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const app = require('../app');
+
+const server = app.listen(3000, 'localhost', () => {
+  const host = server.address().address,
+    port = server.address().port;
+  console.log(`Server running at http://${host}:${port}/api`);
+});
