@@ -1,2 +1,6 @@
-# Node
-node_modules/
+# Node Modules
+node_modules
+
+# Configs Default
+config/default.json
+

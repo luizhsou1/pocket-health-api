@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -7,6 +8,8 @@ router.get('/', (req, res) => {
 });
 
 // stormtroopers
+router.use('/login', require('./login'));
 router.use('/users', require('./users'));
+router.use('/doctor', require('./doctor'));
 
 module.exports = router;

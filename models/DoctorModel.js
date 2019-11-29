@@ -1,7 +1,8 @@
 'use strict';
-class  UserDAO {
-  constructor(UserModel) {
-    this.model = UserModel; 
+
+class  DoctorDAO {
+  constructor(DoctorModel) {
+    this.model = DoctorModel; 
   }
 
   create(data, callback) {
@@ -36,15 +37,17 @@ class  UserDAO {
 }
 
 module.exports = function(mongoose) {
-  const UserSchema = new mongoose.Schema({
-    username: { type: String, required: true },
-    password: { type: String, required: true },
+  const DoctorSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    admin: { type: Boolean, required: true },
+    cpf: { type: String, required: true },
+    specialty: { type: String, required: true },
+    crm: { type: Number, required: true },
+    work: { type: String, required: true }, // Como não modelei o Schema Intitution, prefiri colocar como String
+    consultValue: { type: String, required: true },
     createdAt: { type: Date, default: Date.now() }
   });
 
-  const UserModel = mongoose.model('User', UserSchema);
+  const DoctorModel = mongoose.model('Doctor', DoctorSchema);
 
-  return new UserDAO(UserModel);
+  return new DoctorDAO(DoctorModel);
 };

@@ -1,0 +1,10 @@
+{
+  "mongo": {
+    "username": "",
+    "password": "",
+    "server": "localhost",
+    "port": 27017,
+    "database": "pocket_health"
+  },
+  "jwtTokenSecret": "fZXyjVDBd4SS0oZ28e5a+LY4OIJ/DukrqzFz2QC9E6XtjD9//fRJGzepXwlZn+O7PE4zKUEUsyYtrqgFo/arFSM6JZnQOhDCxOF3e8ifhOtXyemh9j7/Y/nJlVGPUF61AB4C4OlXXzoMEfAQt34SRzXEAhqFJvcDk1/H0Bwr7VXnAJEZauLTIKYtjfxqOD1bbJhVeNJZcBFOrmFX99lGefkAFgrM0ctlyGCIlAhG9lWEXdqA+MGFVnu0Zezs2PaMHCuBwQQxcg9EVCms9d8/SlBkgs0tS66Xtpbguu9XdAvxEgyJ89o4ygjxuz1lxHs01Gtnx8IeVE3TbDVXw5LfnQ=="
+}
