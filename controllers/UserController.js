@@ -23,7 +23,7 @@ class UserController {
   create(req, res, next) {
     const body = req.body;
     this.model.createAsync(body)
-      .then((err, data) => res.json(data))
+      .then((data, err) => res.json(data))
       .catch(next);
   }
 
@@ -31,14 +31,14 @@ class UserController {
     const _id = req.params._id,
       body = req.body;
     this.model.updateAsync(_id, body)
-      .then((err, data) => res.json(data))
+      .then((data, err) => this.getById(req, res, next))
       .catch(next);
   }
   
   remove(req, res, next) {
     const _id = req.params._id;
     this.model.removeAsync(_id)
-      .then((err, data) => res.json(data))
+      .then((data, err) => res.json(data))
       .catch(next);
   }
 

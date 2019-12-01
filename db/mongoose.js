@@ -20,7 +20,7 @@ mongoose.connect(_connection(), {
 });
 
 const db = mongoose.connection;
-db.on('error', (err) => console.log(err));
-db.once('open', () => console.log('Connected to mongodb'));
+// db.on('error', (err) => console.log(err));
+// db.once('open', () => console.log('Connected to mongodb'));
 
 module.exports = mongoose;
