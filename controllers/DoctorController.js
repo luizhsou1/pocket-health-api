@@ -25,7 +25,7 @@ class DoctorController {
     const body = req.body;
 
     if (!validateCpf(body.cpf)){
-      throw new Error('Cpf inválido');
+      return res.status(400).json({ err: 'Cpf inválido' })
     }
 
     this.model.createAsync(body)
