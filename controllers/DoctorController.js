@@ -1,5 +1,6 @@
 // const debug = require('debug')('pocket_health:controller');
 const Promise = require('bluebird');
+const { validateCpf } = require('../utils/validator');
 
 class DoctorController {
   constructor(DoctorModel) {
@@ -22,6 +23,11 @@ class DoctorController {
 
   create(req, res, next) {
     const body = req.body;
+
+    if (!validateCpf(body.cpf)){
+      throw new Error('Cpf inválido');
+    }
+
     this.model.createAsync(body)
       .then((data, err) => res.json(data))
       .catch(next);
