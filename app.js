@@ -1,8 +1,11 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 // server config
 app.use(methodOverride('X­HTTP­Method'));
