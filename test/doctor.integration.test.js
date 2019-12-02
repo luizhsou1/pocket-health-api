@@ -36,7 +36,7 @@ describe('Doctor', function () {
             .post('/api/doctor')
             .send({
                 'name': 'Mateus Ferreira',
-                'cpf': '99999999999',
+                'cpf': '13217598601',
                 'specialty': 'Cardiologist',
                 'crm': '123456',
                 'work': 'Hospital Santa Clara',
@@ -63,7 +63,7 @@ describe('Doctor', function () {
             .end(function (err, res) {
                 if (err) throw err;
                 assert(res.body.name === 'Mateus Ferreira')
-                assert(res.body.cpf === '99999999999')
+                assert(res.body.cpf === '13217598601')
                 assert(res.body.specialty === 'Cardiologist')
                 assert(res.body.crm === 123456)
                 assert(res.body.work === 'Hospital Santa Clara')
